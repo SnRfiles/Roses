@@ -1,0 +1,343 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically and horizontally */
+    height: 100vh;
+    background-color: #000000;
+    margin: 0;
+    overflow: hidden;
+}
+
+.bouquet {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    animation: sway 5s infinite ease-in-out;
+    transform:  translateY(-50px); /* Move the bouquet up slightly */
+}
+
+.flower {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    animation: bloom 3s infinite ease-in-out;
+
+}
+
+
+.flower:nth-child(1) {
+    top: 0; /* Adjusted position */
+    left: 50px;
+    animation-delay: 0s;
+}
+
+.flower:nth-child(2) {
+    top: 50px; /* Adjusted position */
+    left: 150px;
+    animation-delay: 1s;
+}
+
+.flower:nth-child(3) {
+    top: 100px; /* Adjusted position */
+    left: 80px;
+    animation-delay: 2s;
+}
+
+.stem {
+    position: absolute;
+    width: 4px;
+    height: 200px; /* Length of the stem */
+    background: linear-gradient(to bottom, green, rgb(0, 0, 0));
+    bottom: -200px; /* Position stems below the flowers */
+    left: 15%;
+    transform: translateX(-50%);
+    z-index: -2; /* Place stems behind the flowers */
+    filter: drop-shadow(0 0 10px rgba(green, 1));
+}
+
+
+.flower:nth-child(1) .stem {
+    transform: translateX(-10%) rotate(-5deg); /* Angle for first stem */
+    left: 30%;
+    height: 250px;
+    top: 50px;
+}
+
+.flower:nth-child(2) .stem {
+    transform: translateX(-10%) rotate(10deg); /* Angle for second stem */
+    left: -20%;
+    height: 230px;
+    top: 50px;
+}
+
+.flower:nth-child(3) .stem {
+    transform: translateX(-10%) rotate(0deg); /* Angle for third stem */
+    left: 13%;
+    height: 200px;
+    top: 50px;
+}
+
+.petal {
+    position: absolute;
+    width: 40px; /* Wider petals */
+    height: 60px; /* Taller petals */
+    background-color: #ff1493;   
+    border-radius: 50% 4% 50% 4%; /* Curved top edges */
+    transform-origin: bottom center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0); /* Soft shadow for depth */
+    animation: glow 5s infinite ease-in-out 
+
+}
+
+/* Position and tilt the petals */
+.petal-1 { transform: rotate(-15deg) translateY(-11px) translateX(-27px);
+    border-radius: 4% 50% 4% 50%; 
+    z-index: 2;
+    background: linear-gradient(to bottom, #FF3398, #FF1D8D); 
+}
+.petal-2 { transform: rotate(0deg) translateY(-13px) translateX(-30px);
+    border-radius: 4% 50% 4% 50%;
+    z-index: 1; 
+    background: linear-gradient(to bottom, #FF4AA3, #FF3398);
+    height: 62px;
+
+}
+.petal-3 { transform: rotate(0deg) translateY(-18px) translateX(-11px);
+    border-radius: 30% 30% 30% 30%; 
+    z-index: -1;
+    background: linear-gradient(to bottom, #FF60AF, #FF4AA3);
+}
+.petal-4 { transform: rotate(0deg) translateY(-13px) translateX(8px);
+    background: linear-gradient(to bottom, #FF4AA3, #FF3398);
+    height: 62px;
+    z-index: 1;
+}
+.petal-5 { transform: rotate(-30deg) translateY(-12px) translateX(-24px);
+    border-radius: 4% 50% 4% 50%; 
+    z-index: 3;
+    background: linear-gradient(to bottom, #FF1D8D, #FF0066);
+}
+.petal-6 { transform: rotate(30deg) translateY(-1px) translateX(6px);
+    z-index: 3;
+    background: linear-gradient(to bottom, #FF1D8D, #FF0066);
+}
+.petal-7 { transform: rotate(15deg) translateY(-6px) translateX(7px);
+    background: linear-gradient(to bottom, #FF3398, #FF1D8D); 
+    z-index: 2;
+}
+
+.poem {
+    position: fixed; /* Fixed positioning */
+    font-family: 'Dancing Script'; /* Poetic font */
+    font-size: 20px; /* Adjust font size */
+    color: #ff69b4; /* Pink color */
+    text-align: center; /* Center text horizontally */
+    text-shadow: 2px 2px 4px rgba(249, 21, 207, 0.8); /* Soft shadow for depth */
+    z-index: 5; /* Ensure it's above other elements */
+    transform: translateX(215px) translateY(-70px); /* Adjust position */
+}
+
+.poem2 {
+    position: fixed; /* Fixed positioning */
+    font-family: 'Dancing Script'; /* Poetic font */
+    font-size: 22px; /* Adjust font size */
+    color: #ff69b4; /* Pink color */
+    text-align: center; /* Center text horizontally */
+    text-shadow: 2px 2px 4px rgba(249, 21, 207, 0.8); /* Soft shadow for depth */
+    z-index: 5; /* Ensure it's above other elements */
+    transform: translateX(-600px) translateY(-50px); /* Adjust position */
+}
+
+.poem3 {
+    position: fixed; /* Fixed positioning */
+    font-family: 'Dancing Script'; /* Poetic font */
+    font-size: 18px; /* Adjust font size */
+    color: #ff69b4; /* Pink color */
+    text-align: center; /* Center text horizontally */
+    text-shadow: 3px 3px 5px rgba(249, 21, 207, 0.8); /* Soft shadow for depth */
+    z-index: 5; /* Ensure it's above other elements */
+    top: 50%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    transform: translate(-50%, -50%) translateX(-50px) translateY(270px);
+}
+
+.her {
+    position: absolute;
+    top: 20px; /* Position at the top of the screen */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.name {
+    font-size: 40px; /* Adjust font size */
+    font-weight: bold;
+    color: #ff69b4; /* Pink text (existing style) */
+    text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.5); /* Pink shadow (existing style) */
+    position: absolute;
+    transform-origin: bottom center; /* Rotate around the bottom center */
+}
+
+/* Position and rotate each letter */
+.name:nth-child(1) { /* R */
+    transform: translateY(45px) translateX(-140px) rotate(-30deg);
+}
+
+.name:nth-child(2) { /* O */
+    transform: translateY(25px) translateX(-90px) rotate(-15deg);
+}
+
+.name:nth-child(3) { /* A */
+    transform: translateY(17px) translateX(-40px) rotate(0deg);
+}
+
+.name:nth-child(4) { /* Y */
+    transform: translateY(25px) translateX(10px) rotate(15deg);
+}
+
+.name:nth-child(5) { /* A */
+    transform: translateY(45px) translateX(60px) rotate(30deg);
+}
+
+
+.heart {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    transform: translateX(200px);
+  }
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    content: "";
+    left: 199px;
+    top: 0;
+    width: 200px;
+    height: 320px;
+    background: rgb(0, 0, 0);
+    border-radius: 110px 110px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    z-index: -3;
+  }
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    z-index: -3;
+  }
+
+.heart2 {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    transform: translateX(200px);
+  }
+  .heart2:before,
+  .heart2:after {
+    position: absolute;
+    content: "";
+    left: 199px;
+    top: 0;
+    width: 200px;
+    height: 320px;
+    background: rgb(0, 0, 0);
+    border-radius: 110px 110px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    filter: drop-shadow(0 0 20px rgba(255, 105, 180, .6));
+    z-index: -5;
+  }
+  .heart2:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    z-index: -5;
+  }
+
+  .heart3 {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    transform: translateX(-600px);
+  }
+  .heart3:before,
+  .heart3:after {
+    position: absolute;
+    content: "";
+    left: 199px;
+    top: 0;
+    width: 200px;
+    height: 320px;
+    background: rgb(0, 0, 0);
+    border-radius: 110px 110px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    z-index: -3;
+  }
+  .heart3:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    z-index: -3;
+  }
+
+.heart4 {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    transform: translateX(-600px);
+  }
+  .heart4:before,
+  .heart4:after {
+    position: absolute;
+    content: "";
+    left: 199px;
+    top: 0;
+    width: 200px;
+    height: 320px;
+    background: rgb(0, 0, 0);
+    border-radius: 110px 110px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    filter: drop-shadow(0 0 20px rgba(255, 105, 180, .6));
+    z-index: -5;
+  }
+  .heart4:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    z-index: -5;
+  }
+
+
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(5deg) translateY(-50px); 
+    }
+    50% {
+        transform: rotate(-5deg) translateY(-50px); 
+    }
+}
+
+@keyframes bloom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 105, 180, .6));
+    }
+}
