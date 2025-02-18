@@ -158,7 +158,7 @@ body {
     z-index: 5; /* Ensure it's above other elements */
     top: 50%; /* Position from the top */
     left: 50%; /* Position from the left */
-    transform: translate(-50%, -50%) translateX(-50px) translateY(270px);
+    transform: translate(-50%, -50%) translateX(-50px) translateY(275px);
 }
 
 .her {
